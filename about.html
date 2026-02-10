@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | VERA Interiors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vera-gold': '#D4AF37',
+                        'vera-dark': '#1a1a1a',
+                        'vera-cream': '#f9f9f7',
+                        'vera-accent': '#2C3E50',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-vera-cream text-gray-800 font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-vera-dark" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-serif font-bold text-white tracking-wider">VERA<span
+                            class="text-vera-gold">.</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html"
+                        class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">HOME</a>
+                    <a href="about.html" class="text-vera-gold px-3 py-2 text-sm font-medium tracking-wide">ABOUT</a>
+                    <a href="services.html"
+                        class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">SERVICES</a>
+                    <a href="portfolio.html"
+                        class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">PORTFOLIO</a>
+                    <a href="contact.html"
+                        class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">CONTACT</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-vera-dark pb-4" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html"
+                        class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">HOME</a>
+                    <a href="about.html" class="block text-vera-gold px-3 py-2 text-base font-medium">ABOUT</a>
+                    <a href="services.html"
+                        class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">SERVICES</a>
+                    <a href="portfolio.html"
+                        class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">PORTFOLIO</a>
+                    <a href="contact.html"
+                        class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Banner -->
+    <header class="bg-gray-900 h-64 flex items-center justify-center relative">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2000&auto=format&fit=crop"
+                class="w-full h-full object-cover opacity-40">
+        </div>
+        <div class="relative z-10 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold">Our Story</h1>
+            <p class="mt-2 text-gray-300 text-lg">Crafting Lifestyles, One Room at a Time</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=1000&auto=format&fit=crop"
+                        alt="The Studio" class="rounded-lg shadow-xl mb-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1600210491892-03d54cc0fab0?q=80&w=500&auto=format&fit=crop"
+                            class="rounded-lg shadow-md">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=500&auto=format&fit=crop"
+                            class="rounded-lg shadow-md">
+                    </div>
+                </div>
+                <div class="reveal">
+                    <h2 class="text-3xl font-serif text-vera-dark mb-6">Who We Are</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        VERA Interiors was founded with a singular vision: to bring world-class interior design to Sri
+                        Lanka. We specialize in transforming ordinary spaces into extraordinary environments that
+                        inspire and comfort. From luxury apartments in Colombo to boutique restaurants, our portfolio
+                        reflects our commitment to excellence.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our team of passionate designers and architects works closely with every client to understand
+                        their unique needs and aesthetic preferences. We don't just decorate; we curate experiences
+                        tailored to your lifestyle.
+                    </p>
+                    <div class="border-l-4 border-vera-gold pl-6 py-2 bg-white shadow-sm">
+                        <p class="text-lg font-serif italic text-vera-dark">"Design is not just what it looks like and
+                            feels like. Design is how it works."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Team Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-serif mb-10">Meet The Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Member 1 -->
+                <div class="reveal">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4 border-4 border-vera-gold">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=500&auto=format&fit=crop"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-vera-dark">Kavinda Perera</h3>
+                    <p class="text-gray-500">Lead Designer</p>
+                </div>
+                <!-- Member 2 -->
+                <div class="reveal delay-100">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4 border-4 border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=500&auto=format&fit=crop"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-vera-dark">Dilshan Silva</h3>
+                    <p class="text-gray-500">Project Manager</p>
+                </div>
+                <!-- Member 3 -->
+                <div class="reveal delay-200">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4 border-4 border-gray-200">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=500&auto=format&fit=crop"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-vera-dark">Nimali De Silva</h3>
+                    <p class="text-gray-500">Interior Architect</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-vera-dark text-white py-12 border-t border-gray-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+            &copy; 2024 VERA Interiors.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

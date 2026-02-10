@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | VERA Interiors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vera-gold': '#D4AF37',
+                        'vera-dark': '#1a1a1a',
+                        'vera-cream': '#f9f9f7',
+                        'vera-accent': '#2C3E50',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-vera-cream text-gray-800 font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-vera-dark" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-serif font-bold text-white tracking-wider">VERA<span
+                            class="text-vera-gold">.</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html"
+                        class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">HOME</a>
+                    <a href="about.html"
+                        class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">ABOUT</a>
+                    <a href="services.html"
+                        class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">SERVICES</a>
+                    <a href="portfolio.html"
+                        class="text-vera-gold px-3 py-2 text-sm font-medium tracking-wide">PORTFOLIO</a>
+                    <a href="contact.html"
+                        class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">CONTACT</a>
+                </div>
+                <!-- Mobile Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-vera-dark pb-4" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html"
+                        class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">HOME</a>
+                    <a href="about.html"
+                        class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">ABOUT</a>
+                    <a href="services.html"
+                        class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">SERVICES</a>
+                    <a href="portfolio.html" class="block text-vera-gold px-3 py-2 text-base font-medium">PORTFOLIO</a>
+                    <a href="contact.html"
+                        class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gray-900 h-64 flex items-center justify-center relative">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=2000&auto=format&fit=crop"
+                class="w-full h-full object-cover opacity-30">
+        </div>
+        <div class="relative z-10 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold">Our Works</h1>
+            <p class="mt-2 text-gray-300 text-lg">A Gallery of Innovation & Style</p>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid -->
+    <main class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Filter Buttons -->
+            <div class="flex justify-center space-x-4 mb-12 flex-wrap gap-2">
+                <button
+                    class="filter-btn active px-6 py-2 border border-vera-gold bg-vera-gold text-white rounded-full transition hover:bg-white hover:text-vera-gold"
+                    data-filter="all">All</button>
+                <button
+                    class="filter-btn px-6 py-2 border border-vera-gold text-vera-dark rounded-full transition hover:bg-vera-gold hover:text-white"
+                    data-filter="apartment">Apartments</button>
+                <button
+                    class="filter-btn px-6 py-2 border border-vera-gold text-vera-dark rounded-full transition hover:bg-vera-gold hover:text-white"
+                    data-filter="house">Houses</button>
+                <button
+                    class="filter-btn px-6 py-2 border border-vera-gold text-vera-dark rounded-full transition hover:bg-vera-gold hover:text-white"
+                    data-filter="restaurant">Restaurants</button>
+            </div>
+
+            <!-- Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery">
+                <!-- Item 1: Apartment -->
+                <div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg aspect-w-4 aspect-h-3 bg-gray-200"
+                    data-category="apartment">
+                    <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?q=80&w=800&auto=format&fit=crop"
+                        class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center flex-col text-center">
+                        <h3 class="text-white font-serif text-2xl mb-1">Luxury Colombo Apt</h3>
+                        <p class="text-vera-gold text-sm uppercase tracking-widest">Apartment</p>
+                    </div>
+                </div>
+                <!-- Item 2: House -->
+                <div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg aspect-w-4 aspect-h-3 bg-gray-200"
+                    data-category="house">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800&auto=format&fit=crop"
+                        class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center flex-col text-center">
+                        <h3 class="text-white font-serif text-2xl mb-1">Modern Villa Kandy</h3>
+                        <p class="text-vera-gold text-sm uppercase tracking-widest">House</p>
+                    </div>
+                </div>
+                <!-- Item 3: Restaurant -->
+                <div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg aspect-w-4 aspect-h-3 bg-gray-200"
+                    data-category="restaurant">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop"
+                        class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center flex-col text-center">
+                        <h3 class="text-white font-serif text-2xl mb-1">The Golden Fork</h3>
+                        <p class="text-vera-gold text-sm uppercase tracking-widest">Restaurant</p>
+                    </div>
+                </div>
+                <!-- Item 4: Apartment -->
+                <div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg aspect-w-4 aspect-h-3 bg-gray-200"
+                    data-category="apartment">
+                    <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?q=80&w=800&auto=format&fit=crop"
+                        class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center flex-col text-center">
+                        <h3 class="text-white font-serif text-2xl mb-1">Skyline Studio</h3>
+                        <p class="text-vera-gold text-sm uppercase tracking-widest">Apartment</p>
+                    </div>
+                </div>
+                <!-- Item 5: House -->
+                <div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg aspect-w-4 aspect-h-3 bg-gray-200"
+                    data-category="house">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+                        class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center flex-col text-center">
+                        <h3 class="text-white font-serif text-2xl mb-1">Galle Seaside Home</h3>
+                        <p class="text-vera-gold text-sm uppercase tracking-widest">House</p>
+                    </div>
+                </div>
+                <!-- Item 6: Restaurant -->
+                <div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg aspect-w-4 aspect-h-3 bg-gray-200"
+                    data-category="restaurant">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3c6221741?q=80&w=800&auto=format&fit=crop"
+                        class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center flex-col text-center">
+                        <h3 class="text-white font-serif text-2xl mb-1">Urban Café</h3>
+                        <p class="text-vera-gold text-sm uppercase tracking-widest">Restaurant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-vera-dark text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+            &copy; 2024 VERA Interiors.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple filter logic for this page
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-vera-gold', 'text-white');
+                    b.classList.add('text-vera-dark');
+                });
+                // Add active class to clicked
+                btn.classList.add('bg-vera-gold', 'text-white');
+                btn.classList.remove('text-vera-dark');
+
+                const filter = btn.getAttribute('data-filter');
+
+                items.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                        item.classList.add('block');
+                        // Optional: Fade in animation
+                        item.animate([
+                            { opacity: 0, transform: 'scale(0.9)' },
+                            { opacity: 1, transform: 'scale(1)' }
+                        ], {
+                            duration: 300,
+                            fill: 'forwards'
+                        });
+                    } else {
+                        item.classList.add('hidden');
+                        item.classList.remove('block');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

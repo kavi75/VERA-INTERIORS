@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERA Interiors | Modern Luxury Design in Sri Lanka</title>
+    <meta name="description" content="Premium interior design for apartments, houses, and restaurants in Sri Lanka. VERA Interiors transforms spaces into masterpieces.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vera-gold': '#D4AF37',
+                        'vera-dark': '#1a1a1a',
+                        'vera-cream': '#f9f9f7',
+                        'vera-accent': '#2C3E50',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-vera-cream text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-serif font-bold text-white tracking-wider">VERA<span class="text-vera-gold">.</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">HOME</a>
+                    <a href="about.html" class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">ABOUT</a>
+                    <a href="services.html" class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">SERVICES</a>
+                    <a href="portfolio.html" class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">PORTFOLIO</a>
+                    <a href="contact.html" class="text-white hover:text-vera-gold transition px-3 py-2 text-sm font-medium tracking-wide">CONTACT</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-vera-dark absolute w-full" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">HOME</a>
+                <a href="about.html" class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">ABOUT</a>
+                <a href="services.html" class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">SERVICES</a>
+                <a href="portfolio.html" class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">PORTFOLIO</a>
+                <a href="contact.html" class="block text-white hover:text-vera-gold px-3 py-2 text-base font-medium">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" alt="Luxury Interior" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 fade-in-up">
+            <h1 class="text-5xl md:text-7xl font-serif text-white font-bold mb-4 tracking-tight">Redefining <span class="text-vera-gold italic">Luxury</span> Living</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light max-w-2xl mx-auto">Exquisite interiors for apartments, homes, and restaurants across Sri Lanka.</p>
+            <a href="portfolio.html" class="inline-block bg-vera-gold text-white px-8 py-3 text-lg font-medium tracking-wide hover:bg-white hover:text-vera-dark transition duration-300 ease-in-out uppercase">View Our Work</a>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-serif text-vera-dark mb-6">Welcome to VERA Interiors</h2>
+            <div class="w-24 h-1 bg-vera-gold mx-auto mb-8"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Situated in the heart of Sri Lanka, VERA Interiors brings a touch of elegance and sophistication to every space. Whether it's a cozy apartment, a sprawling house, or a vibrant restaurant, our designs blend functionality with breathtaking aesthetics. We believe your space should tell your story.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-20 bg-vera-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="group relative overflow-hidden shadow-lg h-96 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=800&auto=format&fit=crop" alt="Apartment Interior" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-serif text-white mb-2 translate-y-4 group-hover:translate-y-0 transition duration-300">Apartments</h3>
+                        <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition duration-300 delay-100">Maximize space with modern, chic designs tailored for urban living in Colombo and beyond.</p>
+                        <a href="services.html" class="mt-4 text-vera-gold text-sm font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition duration-300 delay-200">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="group relative overflow-hidden shadow-lg h-96 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop" alt="House Interior" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-serif text-white mb-2 translate-y-4 group-hover:translate-y-0 transition duration-300">Houses</h3>
+                        <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition duration-300 delay-100">From concept to completion, we craft homes that serve as your personal sanctuary.</p>
+                        <a href="services.html" class="mt-4 text-vera-gold text-sm font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition duration-300 delay-200">Learn More &rarr;</a>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="group relative overflow-hidden shadow-lg h-96 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Restaurant Interior" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300 flex flex-col justify-end p-6">
+                        <h3 class="text-2xl font-serif text-white mb-2 translate-y-4 group-hover:translate-y-0 transition duration-300">Restaurants</h3>
+                        <p class="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition duration-300 delay-100">Create dining experiences that captivate guests with ambiance and style.</p>
+                        <a href="services.html" class="mt-4 text-vera-gold text-sm font-bold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition duration-300 delay-200">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-vera-dark text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-2xl font-serif font-bold tracking-wider mb-4 block">VERA<span class="text-vera-gold">.</span></a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Elevating lifestyles through exceptional interior design. 
+                        Based in Sri Lanka, serving clients island-wide with passion and precision.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-serif mb-4 text-vera-gold">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-serif mb-4 text-vera-gold">Contact Us</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Based in Sri Lanka</li>
+                        <li>Email: hello@verainteriors.lk</li>
+                        <li>Phone: +94 77 123 4567</li>
+                        <li class="flex space-x-4 mt-4">
+                           <!-- Icons could go here -->
+                           <span class="text-xs text-gray-500">Socials coming soon</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
+                &copy; 2024 VERA Interiors. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
